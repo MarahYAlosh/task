@@ -5,10 +5,10 @@ import {
   useTheme,
   Box,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+
 import { useState } from "react";
 import ChatList from "../chat/ChatList";
-
+import ThreePOutlinedIcon from "@mui/icons-material/ThreePOutlined";
 export default function ResponsiveDrawer() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -19,17 +19,17 @@ export default function ResponsiveDrawer() {
   return (
     <>
       <IconButton
-        onClick={() => setOpen(prev => !prev)}
+        onClick={() => setOpen((prev) => !prev)}
         sx={{
           position: "fixed",
-          top: 16,
+          top: "32rem",
           right: 16,
           zIndex: 1300,
           bgcolor: "#fff",
           boxShadow: 1,
         }}
       >
-        <MenuIcon />
+        <ThreePOutlinedIcon />
       </IconButton>
 
       <Drawer

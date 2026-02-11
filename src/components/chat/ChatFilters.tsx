@@ -16,23 +16,32 @@ export default function ChatFilters({ active, onFilter }: Props) {
         borderBottom: "1px solid #eee",
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
-        gap: "1rem"
+        gap: "1rem",
       }}
     >
-
-      <Stack direction="row" spacing={1} width="55%" justifyContent="center" gap="5%">
-        {["الكل", "المقروءة", "غير المقروءة"].map(label => (
+      <Stack
+        direction="row"
+        justifyContent="center"
+        gap="5%"
+        sx={{ alignItems: "center", width: { xs: "90%", md: "55%" } }}
+      >
+        {["الكل", "المقروءة", "غير المقروءة"].map((label) => (
           <Button
             key={label}
             size="small"
             variant={active === label ? "contained" : "outlined"}
             sx={{
-              borderRadius: 5, px: 3, py: 1.2, height: "max-content", ...(active === label ? {
-                background: "#21A7DB",
-              } : { border: "1px solid #EAEAEB" }),
+              borderRadius: 5,
+              px: 3,
+              py: 1.2,
+              height: "max-content",
+              ...(active === label
+                ? {
+                    background: "#21A7DB",
+                  }
+                : { border: "1px solid #EAEAEB" }),
             }}
             onClick={() => onFilter(label)}
-
           >
             {label}
           </Button>
@@ -43,8 +52,6 @@ export default function ChatFilters({ active, onFilter }: Props) {
         fullWidth
         placeholder="البحث في الرسائل"
         size="small"
-
-
         variant="outlined"
         InputProps={{
           endAdornment: (
@@ -58,9 +65,7 @@ export default function ChatFilters({ active, onFilter }: Props) {
           },
         }}
         sx={searchFieldStyle}
-
       />
-
     </Box>
   );
 }

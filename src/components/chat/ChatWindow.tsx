@@ -72,23 +72,6 @@ export default function ChatWindow() {
           </Menu>
         </Box>
       </Box>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <Box
         sx={{
           bgcolor: '#fff',
