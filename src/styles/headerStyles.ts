@@ -139,6 +139,7 @@ export const itemContainerStyle: SxProps<Theme> = {
   alignItems: "center",
   cursor: "pointer",
   minWidth: 64,
+  color:"#333"
 };
 
 export const itemLabelStyle: SxProps<Theme> = {

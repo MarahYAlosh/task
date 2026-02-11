@@ -26,9 +26,18 @@ export const Footer = () => {
                   sx={footerStyles.logo}
                 />
                 <Typography variant="body2" sx={footerStyles.description}>
-                  نقطة وصل" هو منصة إلكترونية سورية شاملة، تربط المستخدم بكل ما يحتاجه في حياته اليومية، من عقارات وسيارات إلى خدمات طبية ومنتجات استهلاكية، بطريقة سهلة وآمنة. هدفنا تسهيل الوصول إلى الإعلانات والمنتجات والخدمات ضمن بيئة موثوقة ومنظّمة.  </Typography>
+                  نقطة وصل" هو منصة إلكترونية سورية شاملة، تربط المستخدم بكل ما
+                  يحتاجه في حياته اليومية، من عقارات وسيارات إلى خدمات طبية
+                  ومنتجات استهلاكية، بطريقة سهلة وآمنة. هدفنا تسهيل الوصول إلى
+                  الإعلانات والمنتجات والخدمات ضمن بيئة موثوقة ومنظّمة.{" "}
+                </Typography>
               </Box>
-              <Stack flexDirection="row" gap="0.9rem" alignItems="center" mt={2}>
+              <Stack
+                flexDirection="row"
+                gap="0.9rem"
+                alignItems="center"
+                mt={2}
+              >
                 <LinkedInIcon
                   sx={{
                     color: "#7A2FA2",
@@ -55,8 +64,6 @@ export const Footer = () => {
                     "&:hover": { opacity: 0.7 },
                   }}
                 />
-
-
               </Stack>
             </Box>
             <Box>
@@ -65,13 +72,20 @@ export const Footer = () => {
                   برعاية
                 </Typography>
                 <Grid container spacing={2}>
-
                   <Grid item xs={6}>
                     <Stack spacing={1}>
-                      <Typography sx={footerStyles.link}>مديرية الصناعة والتجارة</Typography>
-                      <Typography sx={footerStyles.link}>مديرية الاتصالات</Typography>
-                      <Typography sx={footerStyles.link}>مديرية الصحة</Typography>
-                      <Typography sx={footerStyles.link}>مديرية التنمية</Typography>
+                      <Typography sx={footerStyles.link}>
+                        مديرية الصناعة والتجارة
+                      </Typography>
+                      <Typography sx={footerStyles.link}>
+                        مديرية الاتصالات
+                      </Typography>
+                      <Typography sx={footerStyles.link}>
+                        مديرية الصحة
+                      </Typography>
+                      <Typography sx={footerStyles.link}>
+                        مديرية التنمية
+                      </Typography>
                     </Stack>
                   </Grid>
                   <Grid item xs={6}>
@@ -84,29 +98,34 @@ export const Footer = () => {
                     </Stack>
                   </Grid>
                 </Grid>
-
               </Stack>
             </Box>
-
-
-
 
             <Grid item xs={12} sm={3} md={2}>
               <Typography variant="h6" sx={footerStyles.menuTitle}>
                 تصفح المنصة
               </Typography>
               <Stack spacing={1}>
-                <Link href="#" sx={footerStyles.link}>الأقسام الرئيسية</Link>
-                <Link href="#" sx={footerStyles.link}>أضف إعلانك</Link>
-                <Link href="#" sx={footerStyles.link}>تواصل معنا</Link>
-                <Link href="#" sx={footerStyles.link}>سياسة الخصوصية</Link>
-                <Link href="#" sx={footerStyles.link}>سياسة الاستخدام</Link>
-                <Link href="#" sx={footerStyles.link}>الباقات</Link>
+                <Link href="#" sx={footerStyles.link}>
+                  الأقسام الرئيسية
+                </Link>
+                <Link href="#" sx={footerStyles.link}>
+                  أضف إعلانك
+                </Link>
+                <Link href="#" sx={footerStyles.link}>
+                  تواصل معنا
+                </Link>
+                <Link href="#" sx={footerStyles.link}>
+                  سياسة الخصوصية
+                </Link>
+                <Link href="#" sx={footerStyles.link}>
+                  سياسة الاستخدام
+                </Link>
+                <Link href="#" sx={footerStyles.link}>
+                  الباقات
+                </Link>
               </Stack>
             </Grid>
-
-
-
 
             <Box>
               <Stack spacing={1} height="30vh">
@@ -125,7 +144,6 @@ export const Footer = () => {
                 />
               </Stack>
             </Box>
-
           </Box>
 
           <Box sx={footerStyles.bottomBar}>

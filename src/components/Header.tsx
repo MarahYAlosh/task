@@ -58,7 +58,7 @@ const Item = ({
   </Box>
 );
 
-export const UnifiedHeader = () => {
+export const Header = () => {
   const location = useLocation();
 
   const [lang, setLang] = useState("عربي");
@@ -85,44 +85,59 @@ export const UnifiedHeader = () => {
         <Toolbar sx={toolbarStyle}>
           <img src={logo} alt="logo" style={logoStyle as any} />
 
-          <Box sx={{ display: { xs: "none", md: "flex" }, flex: 1, gap: 2 }}>
-            <IconButton onClick={(e) => setLangAnchor(e.currentTarget)}>
-              <LanguageIcon />
-              <Typography>{lang}</Typography>
-              <KeyboardArrowDownIcon />
-            </IconButton>
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
+              flexGrow: 1,
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: 2,
+              width: "100%",
+              mr: 4,
+            }}
+          >
+            <Box>
+              <IconButton onClick={(e) => setLangAnchor(e.currentTarget)}>
+                <LanguageIcon />
+                <Typography>{lang}</Typography>
+                <KeyboardArrowDownIcon />
+              </IconButton>
 
-            <Menu
-              anchorEl={langAnchor}
-              open={Boolean(langAnchor)}
-              onClose={() => setLangAnchor(null)}
-            >
-              <MenuItem onClick={() => (setLang("عربي"), setLangAnchor(null))}>
-                عربي
-              </MenuItem>
-              <MenuItem onClick={() => (setLang("EN"), setLangAnchor(null))}>
-                EN
-              </MenuItem>
-            </Menu>
+              <Menu
+                anchorEl={langAnchor}
+                open={Boolean(langAnchor)}
+                onClose={() => setLangAnchor(null)}
+              >
+                <MenuItem
+                  onClick={() => (setLang("عربي"), setLangAnchor(null))}
+                >
+                  عربي
+                </MenuItem>
+                <MenuItem onClick={() => (setLang("EN"), setLangAnchor(null))}>
+                  EN
+                </MenuItem>
+              </Menu>
+              <IconButton onClick={(e) => setCityAnchor(e.currentTarget)}>
+                <LocationOnIcon />
+                <Typography>{city}</Typography>
+                <KeyboardArrowDownIcon />
+              </IconButton>
 
-            <IconButton onClick={(e) => setCityAnchor(e.currentTarget)}>
-              <LocationOnIcon />
-              <Typography>{city}</Typography>
-              <KeyboardArrowDownIcon />
-            </IconButton>
-
-            <Menu
-              anchorEl={cityAnchor}
-              open={Boolean(cityAnchor)}
-              onClose={() => setCityAnchor(null)}
-            >
-              <MenuItem onClick={() => (setCity("حمص"), setCityAnchor(null))}>
-                حمص
-              </MenuItem>
-              <MenuItem onClick={() => (setCity("طرطوس"), setCityAnchor(null))}>
-                طرطوس
-              </MenuItem>
-            </Menu>
+              <Menu
+                anchorEl={cityAnchor}
+                open={Boolean(cityAnchor)}
+                onClose={() => setCityAnchor(null)}
+              >
+                <MenuItem onClick={() => (setCity("حمص"), setCityAnchor(null))}>
+                  حمص
+                </MenuItem>
+                <MenuItem
+                  onClick={() => (setCity("طرطوس"), setCityAnchor(null))}
+                >
+                  طرطوس
+                </MenuItem>
+              </Menu>
+            </Box>
 
             <TextField
               placeholder="ابحث"
@@ -173,7 +188,7 @@ export const UnifiedHeader = () => {
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               <Avatar>أ</Avatar>
               <Typography sx={{ color: "#333" }}>شادي الحمصي</Typography>
-              <KeyboardArrowDownIcon />
+              <KeyboardArrowDownIcon sx={{ color: "#333" }} />
             </Box>
             <IconButton onClick={toggleDrawer(true, true)}>
               <MenuIcon />
@@ -209,8 +224,8 @@ export const UnifiedHeader = () => {
 
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               <Avatar>أ</Avatar>
-              <Typography color="secondary">شادي الحمصي</Typography>
-              <KeyboardArrowDownIcon />
+              <Typography sx={{ color: "#333" }}>شادي الحمصي</Typography>
+              <KeyboardArrowDownIcon sx={{ color: "#333" }} />
             </Box>
           </Box>
         </Toolbar>

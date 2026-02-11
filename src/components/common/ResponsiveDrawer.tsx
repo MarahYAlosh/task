@@ -29,7 +29,7 @@ export default function ResponsiveDrawer() {
           boxShadow: 1,
         }}
       >
-        <ThreePOutlinedIcon />
+        <ThreePOutlinedIcon sx={{ fontSize: 35 }} />
       </IconButton>
 
       <Drawer

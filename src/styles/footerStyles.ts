@@ -2,8 +2,8 @@ export const footerStyles = {
   root: {
     color: "#fff",
     direction: "rtl",
-     background: "linear-gradient(180deg, #F5EEFC 0%, #E4F3FD 100%)",
-     mt:4
+    background: "linear-gradient(180deg, #F5EEFC 0%, #E4F3FD 100%)",
+    mt: 4,
   },
   container: {
     // maxWidth: 1200,
@@ -19,7 +19,8 @@ export const footerStyles = {
       md: "repeat(4, 1fr)",
     },
     gap: 3,
-    alignItems: "flex-start",
+    justifyItems: "center",
+    alignItems: "center",
   },
   logo: {
     width: 92,
@@ -34,14 +35,14 @@ export const footerStyles = {
   menuTitle: {
     mb: 1,
     color: "#7A2FA2",
-    fontWeight:700,
-    fontSize:"22px"
+    fontWeight: 700,
+    fontSize: "22px",
   },
   link: {
     color: "#3a3a3fff",
-        fontWeight:400,
-    fontSize:"17px",
-    textDecoration:"none"
+    fontWeight: 400,
+    fontSize: "17px",
+    textDecoration: "none",
   },
   contactItem: {
     display: "flex",
