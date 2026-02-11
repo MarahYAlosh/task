@@ -3,11 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+    "homepage": "https://marahyalosh.github.io/task",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -15,6 +18,7 @@
     "@mui/icons-material": "^7.3.7",
     "@mui/material": "^7.3.7",
     "framer-motion": "^12.33.0",
+    "gh-pages": "^6.3.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.13.0"
