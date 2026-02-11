@@ -89,14 +89,14 @@ export const searchFieldStyle: SxProps<Theme> = {
   width: "40%",
   alignSelf: "center",
   "& .MuiOutlinedInput-root": {
-    borderRadius: "12px",
-    height: "2.5rem",
-    backgroundColor: "#fff",
+    borderRadius: "15px",
+    height: "3rem",
+     backgroundColor: "rgba(234,234,235,0.2)",
     "& fieldset": {
-      borderColor: "#b0b0b0",
+      borderColor: "#EAEAEB",
     },
     "&:hover fieldset": {
-      borderColor: "rgba(0,0,0,0.15)",
+      borderColor: "#EAEAEB",
       boxShadow: "0 0 6px rgba(0,0,0,0.15)",
     },
     "&.Mui-focused fieldset": {

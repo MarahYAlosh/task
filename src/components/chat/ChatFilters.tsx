@@ -16,14 +16,19 @@ export default function ChatFilters({ active, onFilter }: Props) {
         borderBottom: "1px solid #eee",
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
-        gap: "1rem",
+        gap: { xs: "2%", md: "0%" },
+        alignItems: "center",
+        justifyContent: "flex-start",
       }}
     >
       <Stack
         direction="row"
         justifyContent="center"
-        gap="5%"
-        sx={{ alignItems: "center", width: { xs: "90%", md: "55%" } }}
+        gap={2}
+        sx={{
+          alignItems: "center",
+          width: { xs: "90%", sm: "55%", md: "65%", lg: "47%" },
+        }}
       >
         {["الكل", "المقروءة", "غير المقروءة"].map((label) => (
           <Button
@@ -47,25 +52,31 @@ export default function ChatFilters({ active, onFilter }: Props) {
           </Button>
         ))}
       </Stack>
-
-      <TextField
-        fullWidth
-        placeholder="البحث في الرسائل"
-        size="small"
-        variant="outlined"
-        InputProps={{
-          endAdornment: (
-            <InputAdornment position="end">
-              <SearchOutlinedIcon style={{ color: "#444" }} />
-            </InputAdornment>
-          ),
-          sx: {
-            textAlign: "right",
-            fontSize: "16px",
-          },
+      <Box
+        sx={{
+          alignItems: "center",
+          width: { xs: "90%", sm: "45%", md: "100%" },
         }}
-        sx={searchFieldStyle}
-      />
+      >
+        <TextField
+          fullWidth
+          placeholder="البحث في الرسائل"
+          size="small"
+          variant="outlined"
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <SearchOutlinedIcon style={{ color: "#757779" }} />
+              </InputAdornment>
+            ),
+            sx: {
+              textAlign: "left",
+              fontSize: "16px",
+            },
+          }}
+          sx={{ ...searchFieldStyle, width: "90%", p: 2 }}
+        />
+      </Box>
     </Box>
   );
 }
