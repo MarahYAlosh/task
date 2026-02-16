@@ -10,24 +10,26 @@ export default function ChatList() {
         bgcolor: "#fff",
         borderRadius: 3,
         boxShadow: 1,
-        p: 2,
-        width: { xs: "100%", md: "44%" },
+        // p: 2,
+        width: { xs: "90%", sm: "55%", md: "65%", lg: "47%" },
         height: "560px",
         display: "flex",
         flexDirection: "column",
+        minHeight:"583px"
+
       }}
     >
       <List
         sx={{
           flex: 1,
           overflowY: "auto",
+                  padding:"2px 10px "
         }}
       >
-        {chats?.map(chat => (
+        {chats?.map((chat) => (
           <ChatListItem key={chat.id} chat={chat} />
         ))}
       </List>
     </Box>
-
   );
 }

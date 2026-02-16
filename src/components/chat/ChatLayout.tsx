@@ -22,13 +22,7 @@ export default function ChatLayout() {
     <>
       <MessagesHeader />
       <ChatFilters active={active} onFilter={handleFilter} />
-      <Box
-        display="flex"
-        height="100vh"
-        p={2}
-        gap={2}
-        sx={{ mx: { xs: 0, md: 8 } }}
-      >
+      <Box display="flex" p={2} gap={3} sx={{ maxWidth: "1280px", mx: "auto" }}>
         {!isMobile && <ChatList chats={chats} />}
         <ChatWindow />
         <ResponsiveDrawer />

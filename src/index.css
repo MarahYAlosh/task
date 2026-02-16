@@ -1,13 +1,10 @@
 body {
   margin: 0;
-  min-width: 320px;
   direction: rtl;
-  min-height: 100vh;
   background-color: white;
-  place-items: initial;
-  display: inline !important;
+  overflow-x: hidden;
   padding-right: 0 !important;
-  overflow: auto !important;
+  /* overflow: auto !important; */
 }
 * {
   font-family: "IBM Plex Sans Arabic", sans-serif;

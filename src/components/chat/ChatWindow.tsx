@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { useState } from "react";
+import { MidGrey } from "../../styles/headerStyles";
 
 export default function ChatWindow() {
   const { activeChat } = useChat();
@@ -21,7 +22,7 @@ export default function ChatWindow() {
       <Box
         sx={{
           bgcolor: "#EAEAEB",
-          px: 2,
+          // px: 2,
           py: 1.5,
           display: "flex",
           alignItems: "center",
@@ -35,24 +36,25 @@ export default function ChatWindow() {
             {activeChat.name.charAt(0)}
           </Avatar>
 
-          <Typography fontWeight={600}>
+          <Typography fontWeight={600} fontSize="18px">
             {activeChat.name}
           </Typography>
         </Box>
 
-        <Box display="flex" alignItems="center" gap={1}>
+        <Box display="flex" alignItems="center" gap={0.3}>
           <Typography
-            variant="caption"
-            color="text.secondary"
+            fontSize="14px"
+            sx={MidGrey}
           >
             {activeChat.lastMessageAt}
           </Typography>
 
           <IconButton
-            size="small"
+            
             onClick={(e) => setAnchorEl(e.currentTarget)}
+
           >
-            <MoreVertIcon />
+            <MoreVertIcon                sx={{...MidGrey,fontSize:"17px"}} />
           </IconButton>
 
           <Menu

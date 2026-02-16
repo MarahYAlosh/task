@@ -33,10 +33,11 @@ export const Footer = () => {
                 </Typography>
               </Box>
               <Stack
+                mt={3}
                 flexDirection="row"
                 gap="0.9rem"
                 alignItems="center"
-                mt={2}
+                mr={1}
               >
                 <LinkedInIcon
                   sx={{
@@ -68,9 +69,7 @@ export const Footer = () => {
             </Box>
             <Box>
               <Stack spacing={1} height="30vh">
-                <Typography variant="h6" sx={footerStyles.menuTitle}>
-                  برعاية
-                </Typography>
+                <Typography sx={footerStyles.menuTitle}>برعاية</Typography>
                 <Grid container spacing={2}>
                   <Grid item xs={6}>
                     <Stack spacing={1}>
@@ -102,9 +101,7 @@ export const Footer = () => {
             </Box>
 
             <Grid item xs={12} sm={3} md={2}>
-              <Typography variant="h6" sx={footerStyles.menuTitle}>
-                تصفح المنصة
-              </Typography>
+              <Typography sx={footerStyles.menuTitle}>تصفح المنصة</Typography>
               <Stack spacing={1}>
                 <Link href="#" sx={footerStyles.link}>
                   الأقسام الرئيسية

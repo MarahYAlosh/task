@@ -1,59 +1,11 @@
 import type { SxProps } from "@mui/system";
 import type { Theme } from "@mui/material/styles";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const appBarStyle: SxProps<Theme> = {
   backgroundColor: "#fff",
-  boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
-  my: 3
+  boxShadow: "0 0px 0px rgba(0,0,0,0.05)",
+  my: 3,
+  height: "65px",
 };
 
 export const toolbarStyle: SxProps<Theme> = {
@@ -74,9 +26,11 @@ export const desktopContainerStyle: SxProps<Theme> = {
 };
 
 export const logoStyle: SxProps<Theme> = {
-  width: "90px",
-  height: "70px",
+  width: "80px",
+  height: "80px",
   mx: "3rem",
+  // marginTop:"12px",
+  // marginBottom:"12px"
 };
 
 export const topActionsStyle: SxProps<Theme> = {
@@ -86,12 +40,13 @@ export const topActionsStyle: SxProps<Theme> = {
 };
 
 export const searchFieldStyle: SxProps<Theme> = {
-  width: "40%",
+  width: { lg: "506px", md: "400px", sm: "350px" },
+  height: "57px",
   alignSelf: "center",
   "& .MuiOutlinedInput-root": {
-    borderRadius: "15px",
-    height: "3rem",
-     backgroundColor: "rgba(234,234,235,0.2)",
+    borderRadius: "20px",
+    height: "100%",
+    backgroundColor: "rgba(234,234,235,0.2)",
     "& fieldset": {
       borderColor: "#EAEAEB",
     },
@@ -139,23 +94,24 @@ export const itemContainerStyle: SxProps<Theme> = {
   alignItems: "center",
   cursor: "pointer",
   minWidth: 64,
-  color:"#333"
+  color: "#333",
+  p: { md: 0, lg: 0.4 },
 };
 
 export const itemLabelStyle: SxProps<Theme> = {
   mt: 0.5,
-  fontSize: "0.7rem",
+  fontSize: "14px",
   color: "#757779",
 };
 
 export const searchInputStyle: SxProps<Theme> = {
-  borderRadius: "12px",
+  borderRadius: "20px",
   minWidth: 200,
   height: "2.5rem",
   backgroundColor: "#fff",
   transition: "all 0.3s ease",
   "& fieldset": {
-    borderColor: "#b0b0b0",
+    borderColor: "#light Grey 20%",
   },
   "&:hover fieldset": {
     borderColor: "rgba(0,0,0,0.15)",
@@ -210,17 +166,19 @@ export const avatarNameTextStyle: SxProps<Theme> = {
 };
 
 export const navButtonStyle = (isActive: boolean) => ({
-  color: isActive ? "#6B6E70" : "#0F0F0F",
-  fontSize: "19px",
+  color: isActive ? "#6B6E70" : "#011823",
+  fontSize: "16px",
   textTransform: "none",
-  mx: 1,
+  px: 1,
   fontWeight: isActive ? "bold" : "normal",
   outline: "none !important",
 });
-
 
 export const drawerButtonStyle = {
   color: "#6B6E70",
   fontSize: "1rem",
   textTransform: "none",
+};
+export const MidGrey = {
+  color: "#757779",
 };

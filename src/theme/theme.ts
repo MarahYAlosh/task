@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material";
 
 export const theme = createTheme({
-    direction: "rtl",
+  direction: "rtl",
   typography: {
     fontFamily: `"IBM Plex Sans Arabic", sans-serif`,
     fontWeightRegular: 400,
@@ -13,6 +13,11 @@ export const theme = createTheme({
       styleOverrides: {
         body: {
           fontFamily: `"IBM Plex Sans Arabic", sans-serif`,
+          body: {
+            margin: 0,
+            padding: 0,
+            overflowX: "hidden",
+          },
         },
       },
     },

@@ -3,15 +3,17 @@ export const footerStyles = {
     color: "#fff",
     direction: "rtl",
     background: "linear-gradient(180deg, #F5EEFC 0%, #E4F3FD 100%)",
-    mt: 4,
+    mt: 6,
   },
   container: {
-    // maxWidth: 1200,
+    maxWidth: "1280px",
     mx: "auto",
-    px: { xs: 2, md: 3 },
-    py: { xs: 4, md: 6 },
+
+    // px: { xs: 2, md: 3 },
+    // py: { xs: 4, md: 6 },
   },
   gridWrapper: {
+    pt: 6,
     display: "grid",
     gridTemplateColumns: {
       xs: "1fr",
@@ -20,23 +22,24 @@ export const footerStyles = {
     },
     gap: 3,
     justifyItems: "center",
-    alignItems: "center",
+    alignItems: "start",
   },
   logo: {
-    width: 92,
-    height: "auto",
+    width: "67px",
+    height: "55",
     mb: 2,
   },
   description: {
     color: "#000002ff",
     lineHeight: 1.6,
     maxWidth: "250px",
+    mr: 1,
   },
   menuTitle: {
-    mb: 1,
+    mb: "24px !important",
     color: "#7A2FA2",
     fontWeight: 700,
-    fontSize: "22px",
+    fontSize: "20px",
   },
   link: {
     color: "#3a3a3fff",
@@ -63,7 +66,7 @@ export const footerStyles = {
   bottomBar: {
     borderTop: "1px solid rgba(255,255,255,0.06)",
     mt: 4,
-    pt: 2,
+    py: 2,
   },
   copyright: {
     color: "#9a9aa9",

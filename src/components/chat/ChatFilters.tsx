@@ -11,14 +11,16 @@ export default function ChatFilters({ active, onFilter }: Props) {
     <Box
       sx={{
         bgcolor: "#fff",
-        px: 2,
-        py: 2,
+        maxWidth: "1280px",
+        // px: 2,
+        pt: 2,
         borderBottom: "1px solid #eee",
         display: "flex",
-        flexDirection: { xs: "column", md: "row" },
+        flexDirection: { xs: "column-reverse", md: "row" },
         gap: { xs: "2%", md: "0%" },
         alignItems: "center",
         justifyContent: "flex-start",
+        mx: "auto",
       }}
     >
       <Stack
@@ -33,12 +35,12 @@ export default function ChatFilters({ active, onFilter }: Props) {
         {["الكل", "المقروءة", "غير المقروءة"].map((label) => (
           <Button
             key={label}
-            size="small"
             variant={active === label ? "contained" : "outlined"}
             sx={{
               borderRadius: 5,
-              px: 3,
-              py: 1.2,
+              fontSize: { xs: "16px", sm: "13px", md: "15px", lg: "16px" },
+              px: 2.5,
+              py: 1,
               height: "max-content",
               ...(active === label
                 ? {
@@ -61,12 +63,13 @@ export default function ChatFilters({ active, onFilter }: Props) {
         <TextField
           fullWidth
           placeholder="البحث في الرسائل"
-          size="small"
           variant="outlined"
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
-                <SearchOutlinedIcon style={{ color: "#757779" }} />
+                <SearchOutlinedIcon
+                  style={{ color: "#757779", marginLeft: "20px" }}
+                />
               </InputAdornment>
             ),
             sx: {
@@ -74,7 +77,7 @@ export default function ChatFilters({ active, onFilter }: Props) {
               fontSize: "16px",
             },
           }}
-          sx={{ ...searchFieldStyle, width: "90%", p: 2 }}
+          sx={{ ...searchFieldStyle, width: "90%", padding: "16px 20px" }}
         />
       </Box>
     </Box>

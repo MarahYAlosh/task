@@ -14,7 +14,7 @@ interface Props {
 
 export default function ChatListItem({ chat }: Props) {
   const { activeChat, openChat } = useChat();
-  const equalChat = activeChat?.id === chat.id
+  const equalChat = activeChat?.id === chat.id;
   return (
     <ListItemButton
       selected={equalChat}
@@ -27,21 +27,20 @@ export default function ChatListItem({ chat }: Props) {
         "&:hover": {
           bgcolor: chat.unread || equalChat ? "#6b6b6b60" : "#F6F8FC",
         },
-        width: "100%"
-
+        width: "100%",
       }}
     >
       <Box
         sx={{
-          display: 'flex',
-          alignItems: 'center',
+          display: "flex",
+          alignItems: "center",
           p: 1.5,
           borderRadius: 2,
-          cursor: 'pointer',
-          transition: '0.2s',
+          cursor: "pointer",
+          transition: "0.2s",
 
           gap: "0.7rem",
-          width: "100%"
+          width: "100%",
         }}
       >
         <ListItemAvatar>
@@ -57,22 +56,17 @@ export default function ChatListItem({ chat }: Props) {
               },
             }}
           >
-            <Avatar src={chat.avatar}>
-              {chat.name.charAt(0)}
-            </Avatar>
+            <Avatar src={chat.avatar}>{chat.name.charAt(0)}</Avatar>
           </Badge>
         </ListItemAvatar>
 
         <Box sx={{ flex: 1, width: "100%" }}>
           <Box display="flex" justifyContent="space-between" width="100%">
-            <Typography
-              fontWeight={chat.unread ? 700 : 400}
-              color={chat.unread ? "#545454" : "#000"}
-            >
+            <Typography fontWeight={700} color="#000" fontSize="14px">
               {chat.name}
             </Typography>
 
-            <Typography variant="caption" color="#323335">
+            <Typography fontWeight={400} fontSize="14px" color="#323335">
               {chat.lastMessageAt}
             </Typography>
           </Box>
@@ -81,6 +75,8 @@ export default function ChatListItem({ chat }: Props) {
             variant="body2"
             color={chat.unread ? "#323335" : "#757779"}
             noWrap
+            mt={1}
+            textAlign="start"
           >
             {chat.messages.at(-1)?.text}
           </Typography>

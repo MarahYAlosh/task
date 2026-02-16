@@ -37,7 +37,7 @@ export default function ResponsiveDrawer() {
         onClose={() => setOpen(false)}
         PaperProps={{
           sx: {
-            width: "85vw",
+            width: "100%",
             maxWidth: 360,
             p: 2,
           },
