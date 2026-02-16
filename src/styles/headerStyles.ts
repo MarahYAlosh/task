@@ -43,6 +43,10 @@ export const searchFieldStyle: SxProps<Theme> = {
   width: { lg: "506px", md: "400px", sm: "350px" },
   height: "57px",
   alignSelf: "center",
+  "& .MuiInputAdornment-positionEnd": {
+  marginLeft: 0,
+},
+
   "& .MuiOutlinedInput-root": {
     borderRadius: "20px",
     height: "100%",

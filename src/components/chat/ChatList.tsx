@@ -23,7 +23,7 @@ export default function ChatList() {
         sx={{
           flex: 1,
           overflowY: "auto",
-                  padding:"2px 10px "
+                  padding:"9px 12px "
         }}
       >
         {chats?.map((chat) => (

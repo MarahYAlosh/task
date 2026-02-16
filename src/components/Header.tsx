@@ -112,7 +112,7 @@ export const Header = () => {
               <Box>
                 <IconButton onClick={(e) => setLangAnchor(e.currentTarget)}>
                   <LanguageIcon />
-                  <Typography fontSize="1rem" mr={0.5}>
+                  <Typography fontSize="16px" mr={0.5}>
                     {lang}
                   </Typography>
                   <KeyboardArrowDownIcon />
@@ -165,8 +165,8 @@ export const Header = () => {
                 sx={searchFieldStyle}
                 InputProps={{
                   endAdornment: (
-                    <InputAdornment position="end">
-                      <SearchOutlinedIcon sx={{ MidGrey }} />
+                    <InputAdornment  position="end" >
+                      <SearchOutlinedIcon sx={{...MidGrey }} />
                     </InputAdornment>
                   ),
                 }}
