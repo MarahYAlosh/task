@@ -38,8 +38,8 @@ export default function MessageBubble({ message }: any) {
           variant="caption"
           sx={{
             position: "absolute",
-            top: 55,
-            right: 8,
+            top: 41,
+            right: 4,
             color: "#9CA3AF",
           }}
         >
