@@ -166,7 +166,7 @@ export const Header = () => {
                 InputProps={{
                   endAdornment: (
                     <InputAdornment  position="end" >
-                      <SearchOutlinedIcon sx={{...MidGrey }} />
+                      <SearchOutlinedIcon sx={{...MidGrey ,ml:"20px"}} />
                     </InputAdornment>
                   ),
                 }}

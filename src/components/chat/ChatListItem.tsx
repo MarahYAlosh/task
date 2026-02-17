@@ -27,23 +27,34 @@ export default function ChatListItem({ chat }: Props) {
         "&:hover": {
           bgcolor: chat.unread || equalChat ? "#6b6b6b60" : "#F6F8FC",
         },
-        width: "100%",
+        width: "93.5%",
+        padding: "8px 12px ",
+        mx: 1.5,
+        my: 1,
       }}
     >
       <Box
         sx={{
           display: "flex",
           alignItems: "center",
-          p: 1.5,
+          // p: 1.5,
           borderRadius: 2,
           cursor: "pointer",
           transition: "0.2s",
 
-          gap: "0.7rem",
+          gap: "0.5rem",
           width: "100%",
         }}
       >
-        <ListItemAvatar>
+        <ListItemAvatar
+          sx={{
+            width: "60px",
+            height: "60px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <Badge
             color="primary"
             variant={chat.unread ? "dot" : "standard"}
@@ -51,12 +62,14 @@ export default function ChatListItem({ chat }: Props) {
             sx={{
               "& .MuiBadge-badge": {
                 backgroundColor: "#22c55e",
-                right: 6,
-                top: 6,
+                right: 7,
+                top: 8,
               },
             }}
           >
-            <Avatar src={chat.avatar}>{chat.name.charAt(0)}</Avatar>
+            <Avatar sx={{ width: "60px", height: "60px" }} src={chat.avatar}>
+              {chat.name.charAt(0)}
+            </Avatar>
           </Badge>
         </ListItemAvatar>
 
@@ -71,15 +84,24 @@ export default function ChatListItem({ chat }: Props) {
             </Typography>
           </Box>
 
-          <Typography
-            variant="body2"
-            color={chat.unread ? "#323335" : "#757779"}
-            noWrap
-            mt={1}
-            textAlign="start"
-          >
-            {chat.messages.at(-1)?.text}
-          </Typography>
+    <Typography
+  variant="body2"
+  color={chat.unread ? "#323335" : "#757779"}
+  mt={1}
+  textAlign="start"
+  sx={{
+    display: "-webkit-box",
+    WebkitLineClamp: 2,        // عدد الأسطر المسموح
+    WebkitBoxOrient: "vertical",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    lineHeight: "1.4em",
+    maxHeight: "2.8em",        // 2 × line-height
+  }}
+>
+  {chat.messages.at(-1)?.text}
+</Typography>
+
         </Box>
       </Box>
     </ListItemButton>

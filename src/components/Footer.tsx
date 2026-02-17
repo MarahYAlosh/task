@@ -127,7 +127,7 @@ export const Footer = () => {
             <Box>
               <Stack spacing={1} height="30vh">
                 <Typography variant="h6" sx={footerStyles.menuTitle}>
-                  حمل التطبيق الآن
+                  حمل التطبيق 
                 </Typography>
                 <img
                   src={appStore}

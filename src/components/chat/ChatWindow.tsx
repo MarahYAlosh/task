@@ -22,7 +22,7 @@ export default function ChatWindow() {
       <Box
         sx={{
           bgcolor: "#EAEAEB",
-          // px: 2,
+          px: 2,
           py: 1.5,
           display: "flex",
           alignItems: "center",
@@ -31,7 +31,7 @@ export default function ChatWindow() {
           borderTopRightRadius: 12,
         }}
       >
-        <Box display="flex" alignItems="center" gap={1.5}>
+        <Box display="flex" alignItems="center" gap={2}>
           <Avatar src={activeChat.avatar}>
             {activeChat.name.charAt(0)}
           </Avatar>
@@ -77,7 +77,7 @@ export default function ChatWindow() {
       <Box
         sx={{
           bgcolor: '#fff',
-          borderRadius: 3,
+        borderRadius:"0px 0 12px 12px",
           boxShadow: 1,
           height: 520,
           display: 'flex',

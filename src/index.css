@@ -4,7 +4,7 @@ body {
   background-color: white;
   overflow-x: hidden;
   padding-right: 0 !important;
-  /* overflow: auto !important; */
+  overflow: auto !important;
 }
 * {
   font-family: "IBM Plex Sans Arabic", sans-serif;

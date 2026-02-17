@@ -8,12 +8,20 @@ export default function MessageInput() {
   const { sendMessage } = useChat();
 
   return (
-    <Box sx={{ p: 2, display: "flex", background: "#EAEAEB" }}>
+    <Box
+      sx={{
+        p: 2,
+        display: "flex",
+        background: "#EAEAEB",
+        borderRadius: "0px 0 12px 12px",
+      }}
+    >
       <TextField
         fullWidth
         size="small"
         placeholder="اكتب رسالتك هنا"
         sx={{
+          color: "#757779",
           bgcolor: "#ffffff",
           borderRadius: "20px",
           "& fieldset": {

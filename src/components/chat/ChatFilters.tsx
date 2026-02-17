@@ -14,7 +14,6 @@ export default function ChatFilters({ active, onFilter }: Props) {
         maxWidth: "1280px",
         // px: 2,
         pt: 2,
-        borderBottom: "1px solid #eee",
         display: "flex",
         flexDirection: { xs: "column-reverse", md: "row" },
         gap: { xs: "2%", md: "0%" },
@@ -29,7 +28,7 @@ export default function ChatFilters({ active, onFilter }: Props) {
         gap={2}
         sx={{
           alignItems: "center",
-          width: { xs: "90%", sm: "55%", md: "65%", lg: "47%" },
+          width: { xs: "90%", sm: "55%", md: "65%", lg: "41%" },
         }}
       >
         {["الكل", "المقروءة", "غير المقروءة"].map((label) => (

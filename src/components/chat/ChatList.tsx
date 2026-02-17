@@ -11,11 +11,11 @@ export default function ChatList() {
         borderRadius: 3,
         boxShadow: 1,
         // p: 2,
-        width: { xs: "90%", sm: "55%", md: "65%", lg: "47%" },
+        width: { xs: "90%", sm: "55%", md: "65%", lg: "41%" },
         height: "560px",
         display: "flex",
         flexDirection: "column",
-        minHeight:"583px"
+        minHeight: "583px",
 
       }}
     >
@@ -23,7 +23,7 @@ export default function ChatList() {
         sx={{
           flex: 1,
           overflowY: "auto",
-                  padding:"9px 12px "
+          padding:"0"
         }}
       >
         {chats?.map((chat) => (

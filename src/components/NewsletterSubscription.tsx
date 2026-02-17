@@ -27,10 +27,10 @@ export default function NewsletterSubscription() {
       <Box
         sx={{
           position: "absolute",
-          top: -40,
-          left: -40,
-          width: { xs: 70, md: 120 },
-          height: { xs: 70, md: 120 },
+          top: {xs:-42,md:-59,lg:-100},
+          left: {xs:-42,md:-59,lg:-100},
+          width: { xs: 90,md:120, lg: 195 },
+          height: { xs: 90,md:120, lg: 195 },
           borderRadius: "50%",
           border: "6px solid #fff",
         }}
@@ -39,10 +39,10 @@ export default function NewsletterSubscription() {
       <Box
         sx={{
           position: "absolute",
-          bottom: -40,
-          right: -40,
-          width: { xs: 70, md: 120 },
-          height: { xs: 70, md: 120 },
+          bottom:  {xs:-42,md:-59,lg:-100},
+          right: {xs:-42,md:-59,lg:-100},
+          width: { xs: 90,md:120, lg: 195 },
+          height: { xs: 90,md:120, lg: 195 },
           borderRadius: "50%",
           border: "6px solid #fff",
         }}
